@@ -1,72 +1,41 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
+# The URL the site will be built for
+base_url = "https://maciejmikulski.com"
+#base_url = "http://localhost:5000"
+
 title = "maciejmikulski.com"
-theme = "terminal"
-paginate = 5
+logo_text = "maciejmikulski.com"
 
-[params]
-  # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
 
-  # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "orange"
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
 
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+theme = "terminimal"
 
-  # show selector to switch language
-  showLanguageSelector = false
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
 
-  # set theme to full screen width
-  fullWidthTheme = false
+[extra]
+# Put all your custom variables here
+page_titles = "combined"
+logo_text = "maciejmikulski.com"
 
-  # center theme with default width
-  centerTheme = false
 
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
-
-  # set post to show the last updated
-  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  showLastUpdated = false
-  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
-  # updatedDatePrefix = "Updated"
-
-  # set all headings to their default size (depending on browser settings)
-  # it's set to `true` by default
-  # oneHeadingSize = false
-
-[params.twitter]
-  # set Twitter handles for Twitter cards
-  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-  # do not include @
-  creator = "maciejmikulski"
-  site = ""
-
-[languages]
-  [languages.en]
-    languageName = "English"
-    title = "maciejmikulski.com"
-    subtitle = ""
-    owner = "Maciej Mikulski <maciej.mikulski@sparklab.pl>"
-    keywords = "blog"
-    copyright = "&copy; Maciej Mikulski"
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    missingContentMessage = "Page not found..."
-    missingBackButtonLabel = "Back to home page"
-
-    [languages.en.params.logo]
-      logoText = "maciejmikulski.com"
-      logoHomeLink = "/"
-
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
+# menu is enabled by adding menu_items (optional)
+menu_items = [
+    # each of these is optional, name and url are required
+    # $BASE_URL is going to be substituted by base_url from configuration
+    {name = "blog", url = "$BASE_URL/blog"},
+    
+    # tags should only be enabled if you have "tags" taxonomy
+    # see documentation below for more details
+    # {name = "tags", url = "$BASE_URL/tags"},
+    # {name = "archive", url = "$BASE_URL/archive"},
+    {name = "about me", url = "$BASE_URL/about"},
+    
+    # set newtab to true to make the link open in new tab
+    # {name = "github", url = "url-to-your-github", newtab = true},
+]

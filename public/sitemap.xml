@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://maciejmikulski.com/</loc>
+    </url>
+    <url>
+        <loc>https://maciejmikulski.com/blog/</loc>
+    </url>
+    <url>
+        <loc>https://maciejmikulski.com/how-to-reclaim-disk-space-taken-over-by-wsl/</loc>
+        <lastmod>2023-05-14</lastmod>
+    </url>
+    <url>
+        <loc>https://maciejmikulski.com/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://maciejmikulski.com/test-article/</loc>
+        <lastmod>2023-05-13</lastmod>
+    </url>
+</urlset>
